@@ -1,1 +1,153 @@
+/* --- Base (Mobile First) --- */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
 
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gallery img {
+  flex-shrink: 1;
+  flex-grow: 1;
+  flex-basis: 90%;  /* flex-basis practice */
+}
+
+/* STUDENT CODE STARTS HERE */
+@media (min-width: 768px) {
+
+  .grid{
+    display: grid;
+    grid-template-columns: 45% 45%;
+    justify-content: space-between;
+    justify-items: center;
+    padding: 50px;
+
+  }
+
+  .grid > *:nth-child(3n) {
+    grid-column: 1 / 3;
+    justify-content: center;
+    width: 50%;
+
+
+
+
+  }
+
+  .grid > *:nth-child(even) {
+    background-color: #ffff00;
+
+  }
+
+  .gallery{
+    display: flex;
+    justify-content: space-around;
+
+  }
+
+  .gallery img{
+    flex: 1 1 30%;
+
+  }
+
+  }
+
+
+  @media (min-width: 1200px) {
+
+    .grid {
+       grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)) !important;
+       gap: 30px;
+
+    }
+
+    .grid > *:nth-child(3n) {
+    grid-column: auto;   
+    width: auto;         
+    justify-self: auto;
+  }
+
+    .gallery{
+      justify-content: space-between;
+
+    }
+
+    .gallery img{
+      flex: 1 1 200px;
+
+    }
+
+    .grid > *:hover{
+      box-shadow: 5px 10px #888888;
+    
+    
+    }
+
+
+
+
+
+  }
+
+  
+@media (prefers-color-scheme: dark) {
+
+  body {background: #111;
+  color: #eee;
+
+  }
+
+  .grid > div {
+    background: #111;
+    border: 1px solid #EB5B00;
+
+  }
+
+
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gallery img:hover{
+    transform: none;
+
+  }
+
+  .grid > div:hover{
+    box-shadow: none;
+    transform: none;
+
+
+  }
+
+
+
+
+}
+
+@media print {
+  body{
+    background-color: white;
+    color: black;
+    
+
+  }
+
+  .gallery{
+
+    display: none;
+
+  }
+
+  .grid{
+
+
+  }
+
+
+
+}
