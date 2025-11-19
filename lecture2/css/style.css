@@ -45,58 +45,26 @@
   }
   
 
-  /* **** Student code starts here */
-  .grid dl{
-    display: grid;
-    grid-template-columns: auto 1fr;
-    justify-items: start;
+.grid dl {
     column-gap: 10px;
-
-  }
-
-
-
+    justify-items: start;
+    grid-template-columns: auto 1fr;
+    display: grid;
+}
 
 .grid {
-  display: grid;
-  gap: 15px;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-
-
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    display: grid;
 }
 
-div:nth-child(even) img{
-  filter: grayscale();
-  border: 25px solid;
-  box-sizing: border-box;
-
-
-
+div:nth-child(even) img {
+    box-sizing: border-box;
+    border: 25px solid;
+    filter: grayscale();
 }
 
+.gallery {
+    padding: 15px;
+    justify-co
 
-.gallery{
-
-
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  justify-content: center;
-  padding: 15px;
-
-}
-
-
-.gallery img{
-  transition: transform 0.2s ease;
-
-
-
-}
-
-.gallery img:hover{
-  transform: scale(1.05);
-
-
-
-}
